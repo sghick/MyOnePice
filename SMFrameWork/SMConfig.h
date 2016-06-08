@@ -20,7 +20,7 @@
 // 测试服务器
 #define __SM_BASEURL_ @"http://www.baidu.com"
 // 本地数据
-#define __SM_USE_LOCAL_DATA__   ( __OFF__ )
+#define __SM_USE_LOCAL_DATA__   ( __ON__ )
 #else
 // 网络服务器
 #define __SM_BASEURL_ @"http://www.baidu.com"
