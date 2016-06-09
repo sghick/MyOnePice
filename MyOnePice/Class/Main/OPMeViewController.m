@@ -20,7 +20,7 @@
 
 - (void)createSubviews {
     [super createSubviews];
-    self.view.backgroundColor = [UIColor yellowColor];
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - Notifications

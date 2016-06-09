@@ -7,14 +7,13 @@
 //
 
 #import "OnePiceServer.h"
-
+#import "SMServerModel.h"
+#import "ServerDal.h"
 
 static OnePiceServer *shareInstance = nil;
 static dispatch_once_t onceToken;
 
 @interface OnePiceServer ()
-
-@property (strong, nonatomic) NSString *dbPath;
 
 @end
 
@@ -23,7 +22,6 @@ static dispatch_once_t onceToken;
 + (instancetype)allocWithZone:(struct _NSZone *)zone {
     dispatch_once(&onceToken, ^{
         shareInstance = [super allocWithZone:zone];
-        shareInstance.dbPath = [self dbPath];
     });
     return shareInstance;
 }
@@ -35,13 +33,6 @@ static dispatch_once_t onceToken;
     return shareInstance;
 }
 
-+ (NSString *)dbPath {
-    NSString *dbPath = @"";
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    dbPath = [paths.firstObject stringByAppendingPathComponent:@"OnePiceServer.sqlite"];
-    return dbPath;
-}
-
 - (id)requestDataWithUrl:(NSURL *)url params:(NSDictionary *)params {
     SEL selector = NSSelectorFromString([self bussinessUrlKeys][url.absoluteString]);
     if ([self respondsToSelector:@selector(selector)]) {
@@ -51,13 +42,20 @@ static dispatch_once_t onceToken;
 }
 
 #pragma mark - Bussiness
-
-
+- (NSDictionary *)bs_account:(NSDictionary *)params {
+    NSString *userName = params[@"user_name"];
+    SMServerAccount *account = [ServerDal accountWithUserName:userName];
+    if (account) {
+        return account.dictionary;
+    } else {
+        return nil;  
+    }
+}
 
 #pragma mark - private
 - (NSDictionary *)bussinessUrlKeys {
     NSDictionary *dict = @{
-                           
+                           @"/doc/account":@"bs_account:"
                            };
     return dict;
 }

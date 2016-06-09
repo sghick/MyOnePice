@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE0194AF1D0861910019B04C /* SMServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0194AE1D0861910019B04C /* SMServerModel.m */; };
+		FE0194B31D08636A0019B04C /* ServerDal.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0194B21D08636A0019B04C /* ServerDal.m */; };
 		FEA949161D03045B00840844 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949151D03045B00840844 /* main.m */; };
 		FEA9491F1D03045B00840844 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA9491D1D03045B00840844 /* Main.storyboard */; };
 		FEA949211D03045B00840844 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEA949201D03045B00840844 /* Assets.xcassets */; };
@@ -54,9 +56,16 @@
 		FEA949FB1D0337FC00840844 /* OPCarbonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949FA1D0337FC00840844 /* OPCarbonViewController.m */; };
 		FEA949FE1D03384F00840844 /* OPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949FD1D03384F00840844 /* OPMainViewController.m */; };
 		FEC5E1F71D07A489002191CD /* OnePiceServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5E1F61D07A489002191CD /* OnePiceServer.m */; };
+		FEC5EB251D0912EC002E69A5 /* OPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB241D0912EC002E69A5 /* OPModel.m */; };
+		FEC5EB281D099A2B002E69A5 /* OPDal.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB271D099A2B002E69A5 /* OPDal.m */; };
+		FEC5EB2B1D099F4C002E69A5 /* OPDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB2A1D099F4C002E69A5 /* OPDataBaseHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE0194AD1D0861910019B04C /* SMServerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMServerModel.h; sourceTree = "<group>"; };
+		FE0194AE1D0861910019B04C /* SMServerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMServerModel.m; sourceTree = "<group>"; };
+		FE0194B11D08636A0019B04C /* ServerDal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerDal.h; sourceTree = "<group>"; };
+		FE0194B21D08636A0019B04C /* ServerDal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerDal.m; sourceTree = "<group>"; };
 		FEA949111D03045B00840844 /* MyOnePice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyOnePice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA949151D03045B00840844 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FEA9491E1D03045B00840844 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +168,13 @@
 		FEA949FD1D03384F00840844 /* OPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPMainViewController.m; sourceTree = "<group>"; };
 		FEC5E1F51D07A489002191CD /* OnePiceServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnePiceServer.h; sourceTree = "<group>"; };
 		FEC5E1F61D07A489002191CD /* OnePiceServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnePiceServer.m; sourceTree = "<group>"; };
+		FEC5EB221D08F94B002E69A5 /* OnePiceServer.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = OnePiceServer.sqlite; sourceTree = "<group>"; };
+		FEC5EB231D0912EC002E69A5 /* OPModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPModel.h; sourceTree = "<group>"; };
+		FEC5EB241D0912EC002E69A5 /* OPModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPModel.m; sourceTree = "<group>"; };
+		FEC5EB261D099A2B002E69A5 /* OPDal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDal.h; sourceTree = "<group>"; };
+		FEC5EB271D099A2B002E69A5 /* OPDal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDal.m; sourceTree = "<group>"; };
+		FEC5EB291D099F4C002E69A5 /* OPDataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDataBaseHelper.h; sourceTree = "<group>"; };
+		FEC5EB2A1D099F4C002E69A5 /* OPDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDataBaseHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +189,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE0194A91D0861060019B04C /* ServerModels */ = {
+			isa = PBXGroup;
+			children = (
+				FE0194AD1D0861910019B04C /* SMServerModel.h */,
+				FE0194AE1D0861910019B04C /* SMServerModel.m */,
+			);
+			path = ServerModels;
+			sourceTree = "<group>";
+		};
+		FE0194B01D0862D00019B04C /* ServerDal */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5EB221D08F94B002E69A5 /* OnePiceServer.sqlite */,
+				FE0194B11D08636A0019B04C /* ServerDal.h */,
+				FE0194B21D08636A0019B04C /* ServerDal.m */,
+			);
+			path = ServerDal;
+			sourceTree = "<group>";
+		};
 		FEA949081D03045B00840844 = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +555,10 @@
 		FEA949D41D0323E200840844 /* Dals */ = {
 			isa = PBXGroup;
 			children = (
+				FEC5EB261D099A2B002E69A5 /* OPDal.h */,
+				FEC5EB271D099A2B002E69A5 /* OPDal.m */,
+				FEC5EB291D099F4C002E69A5 /* OPDataBaseHelper.h */,
+				FEC5EB2A1D099F4C002E69A5 /* OPDataBaseHelper.m */,
 			);
 			path = Dals;
 			sourceTree = "<group>";
@@ -541,6 +580,8 @@
 		FEA949D71D0323E200840844 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FEC5EB231D0912EC002E69A5 /* OPModel.h */,
+				FEC5EB241D0912EC002E69A5 /* OPModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -581,7 +622,8 @@
 			children = (
 				FEC5E1F51D07A489002191CD /* OnePiceServer.h */,
 				FEC5E1F61D07A489002191CD /* OnePiceServer.m */,
-				FEC5E1F41D07A471002191CD /* ServerModel */,
+				FE0194B01D0862D00019B04C /* ServerDal */,
+				FE0194A91D0861060019B04C /* ServerModels */,
 			);
 			path = OnePiceServer;
 			sourceTree = "<group>";
@@ -592,13 +634,6 @@
 				FEA949F51D0333B100840844 /* OPViewControllerProtocol.h */,
 			);
 			path = Protocol;
-			sourceTree = "<group>";
-		};
-		FEC5E1F41D07A471002191CD /* ServerModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ServerModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,15 +728,18 @@
 				FEA949891D03048900840844 /* FMDatabasePool.m in Sources */,
 				FEA949921D03048900840844 /* SMLogSys.m in Sources */,
 				FEA9498A1D03048900840844 /* FMDatabaseQueue.m in Sources */,
+				FE0194B31D08636A0019B04C /* ServerDal.m in Sources */,
 				FEA949861D03048900840844 /* SMDBManager.m in Sources */,
 				FEA9498C1D03048900840844 /* NSObject+SM.m in Sources */,
 				FEA949A21D03048900840844 /* SMUrlRequest.m in Sources */,
+				FEC5EB251D0912EC002E69A5 /* OPModel.m in Sources */,
 				FEA949971D03048900840844 /* AFHTTPSessionManager.m in Sources */,
 				FEA949931D03048900840844 /* NSUserDefaults+SMModel.m in Sources */,
 				FEA949941D03048900840844 /* SMModel.m in Sources */,
 				FEA949851D03048900840844 /* SMDBHelper.m in Sources */,
 				FEA949961D03048900840844 /* AFHTTPRequestOperationManager.m in Sources */,
 				FEA9498B1D03048900840844 /* FMResultSet.m in Sources */,
+				FEC5EB2B1D099F4C002E69A5 /* OPDataBaseHelper.m in Sources */,
 				FEA949A01D03048900840844 /* SMRequestQueue.m in Sources */,
 				FEA949E11D0323F100840844 /* OPNavigationController.m in Sources */,
 				FEA949901D03048900840844 /* SMAPI.m in Sources */,
@@ -709,7 +747,9 @@
 				FEA949881D03048900840844 /* FMDatabaseAdditions.m in Sources */,
 				FEA949DE1D0323E200840844 /* OPRootViewController.m in Sources */,
 				FEA949FE1D03384F00840844 /* OPMainViewController.m in Sources */,
+				FE0194AF1D0861910019B04C /* SMServerModel.m in Sources */,
 				FEA949981D03048900840844 /* AFNetworkReachabilityManager.m in Sources */,
+				FEC5EB281D099A2B002E69A5 /* OPDal.m in Sources */,
 				FEA949E71D0324AA00840844 /* OPTabBarView.m in Sources */,
 				FEA9499C1D03048900840844 /* AFURLResponseSerialization.m in Sources */,
 				FEA949A11D03048900840844 /* SMUrlRequest+SM.m in Sources */,
