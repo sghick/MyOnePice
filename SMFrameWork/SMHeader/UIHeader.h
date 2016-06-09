@@ -31,9 +31,9 @@
 #define SMHeightScale ({\
 CGFloat heightScale = 1.0; \
 CGFloat curScale = 568.0f;\
-if([[UIDevice currentDevice] sms_isIphone6Plus]){ \
+if([[UIDevice currentDevice] sms_isIphone6xPlus]){ \
 heightScale = 736/curScale;\
-}else if([[UIDevice currentDevice] sms_isIPhone6]){ \
+}else if([[UIDevice currentDevice] sms_isIPhone6x]){ \
 heightScale = 667/curScale;\
 }else if([[UIDevice currentDevice] sms_isIPhone5x]){ \
 heightScale = 568/curScale;\
@@ -47,9 +47,9 @@ heightScale;\
 #define SMWidthScale ({\
 CGFloat widthScale = 1.0; \
 CGFloat curScale = 320.0f;\
-if([[UIDevice currentDevice] sms_isIphone6Plus]){ \
+if([[UIDevice currentDevice] sms_isIphone6xPlus]){ \
 widthScale = 414/curScale;\
-}else if([[UIDevice currentDevice] sms_isIPhone6]){ \
+}else if([[UIDevice currentDevice] sms_isIPhone6x]){ \
 widthScale = 375/curScale;\
 }else if([[UIDevice currentDevice] sms_isIPhone5x]){ \
 widthScale = 320/curScale;\

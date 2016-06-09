@@ -32,7 +32,7 @@
 
 - (BOOL)sms_isIPhone4x;
 - (BOOL)sms_isIPhone5x;
-- (BOOL)sms_isIPhone6;
-- (BOOL)sms_isIphone6Plus;
+- (BOOL)sms_isIPhone6x;
+- (BOOL)sms_isIphone6xPlus;
 
 @end

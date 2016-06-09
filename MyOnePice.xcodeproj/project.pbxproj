@@ -48,8 +48,6 @@
 		FEA949DD1D0323E200840844 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949CF1D0323E200840844 /* AppDelegate.m */; };
 		FEA949DE1D0323E200840844 /* OPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949D11D0323E200840844 /* OPRootViewController.m */; };
 		FEA949E11D0323F100840844 /* OPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949E01D0323F100840844 /* OPNavigationController.m */; };
-		FEA949E41D03248B00840844 /* OPNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949E31D03248B00840844 /* OPNavigationView.m */; };
-		FEA949E71D0324AA00840844 /* OPTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949E61D0324AA00840844 /* OPTabBarView.m */; };
 		FEA949EA1D0324E100840844 /* OPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949E91D0324E100840844 /* OPTabBarController.m */; };
 		FEA949ED1D0328B100840844 /* OpBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949EC1D0328B100840844 /* OpBaseViewController.m */; };
 		FEA949F81D03350200840844 /* OPMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA949F71D03350200840844 /* OPMeViewController.m */; };
@@ -59,6 +57,19 @@
 		FEC5EB251D0912EC002E69A5 /* OPModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB241D0912EC002E69A5 /* OPModel.m */; };
 		FEC5EB281D099A2B002E69A5 /* OPDal.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB271D099A2B002E69A5 /* OPDal.m */; };
 		FEC5EB2B1D099F4C002E69A5 /* OPDataBaseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB2A1D099F4C002E69A5 /* OPDataBaseHelper.m */; };
+		FEC5EB391D09A278002E69A5 /* UIView+WCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB2E1D09A278002E69A5 /* UIView+WCTransition.m */; };
+		FEC5EB3A1D09A278002E69A5 /* WCAnimatedTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB301D09A278002E69A5 /* WCAnimatedTransitioning.m */; };
+		FEC5EB3B1D09A278002E69A5 /* WCTransitionAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB321D09A278002E69A5 /* WCTransitionAnimations.m */; };
+		FEC5EB3C1D09A278002E69A5 /* WCTransitioningDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB341D09A278002E69A5 /* WCTransitioningDelegate.m */; };
+		FEC5EB3D1D09A278002E69A5 /* WCTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB361D09A278002E69A5 /* WCTransitionManager.m */; };
+		FEC5EB471D09A2AF002E69A5 /* WPSwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB451D09A2AF002E69A5 /* WPSwipeView.m */; };
+		FEC5EB561D09A32F002E69A5 /* OPNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB521D09A32F002E69A5 /* OPNavigationView.m */; };
+		FEC5EB571D09A32F002E69A5 /* OPTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB551D09A32F002E69A5 /* OPTabBarView.m */; };
+		FEC5EB5B1D09A55A002E69A5 /* OPRoleCard.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB5A1D09A55A002E69A5 /* OPRoleCard.m */; };
+		FEC5EB681D09B945002E69A5 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB5F1D09B945002E69A5 /* ALView+PureLayout.m */; };
+		FEC5EB691D09B945002E69A5 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB611D09B945002E69A5 /* NSArray+PureLayout.m */; };
+		FEC5EB6A1D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB631D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m */; };
+		FEC5EB6D1D09C049002E69A5 /* OPRoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB6C1D09C049002E69A5 /* OPRoleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,10 +162,6 @@
 		FEA949D11D0323E200840844 /* OPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPRootViewController.m; sourceTree = "<group>"; };
 		FEA949DF1D0323F100840844 /* OPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPNavigationController.h; sourceTree = "<group>"; };
 		FEA949E01D0323F100840844 /* OPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPNavigationController.m; sourceTree = "<group>"; };
-		FEA949E21D03248B00840844 /* OPNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPNavigationView.h; sourceTree = "<group>"; };
-		FEA949E31D03248B00840844 /* OPNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPNavigationView.m; sourceTree = "<group>"; };
-		FEA949E51D0324AA00840844 /* OPTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPTabBarView.h; sourceTree = "<group>"; };
-		FEA949E61D0324AA00840844 /* OPTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPTabBarView.m; sourceTree = "<group>"; };
 		FEA949E81D0324E100840844 /* OPTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPTabBarController.h; sourceTree = "<group>"; };
 		FEA949E91D0324E100840844 /* OPTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPTabBarController.m; sourceTree = "<group>"; };
 		FEA949EB1D0328B100840844 /* OpBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpBaseViewController.h; sourceTree = "<group>"; };
@@ -175,6 +182,39 @@
 		FEC5EB271D099A2B002E69A5 /* OPDal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDal.m; sourceTree = "<group>"; };
 		FEC5EB291D099F4C002E69A5 /* OPDataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDataBaseHelper.h; sourceTree = "<group>"; };
 		FEC5EB2A1D099F4C002E69A5 /* OPDataBaseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDataBaseHelper.m; sourceTree = "<group>"; };
+		FEC5EB2D1D09A278002E69A5 /* UIView+WCTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WCTransition.h"; sourceTree = "<group>"; };
+		FEC5EB2E1D09A278002E69A5 /* UIView+WCTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WCTransition.m"; sourceTree = "<group>"; };
+		FEC5EB2F1D09A278002E69A5 /* WCAnimatedTransitioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCAnimatedTransitioning.h; sourceTree = "<group>"; };
+		FEC5EB301D09A278002E69A5 /* WCAnimatedTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCAnimatedTransitioning.m; sourceTree = "<group>"; };
+		FEC5EB311D09A278002E69A5 /* WCTransitionAnimations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCTransitionAnimations.h; sourceTree = "<group>"; };
+		FEC5EB321D09A278002E69A5 /* WCTransitionAnimations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCTransitionAnimations.m; sourceTree = "<group>"; };
+		FEC5EB331D09A278002E69A5 /* WCTransitioningDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCTransitioningDelegate.h; sourceTree = "<group>"; };
+		FEC5EB341D09A278002E69A5 /* WCTransitioningDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCTransitioningDelegate.m; sourceTree = "<group>"; };
+		FEC5EB351D09A278002E69A5 /* WCTransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCTransitionManager.h; sourceTree = "<group>"; };
+		FEC5EB361D09A278002E69A5 /* WCTransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCTransitionManager.m; sourceTree = "<group>"; };
+		FEC5EB371D09A278002E69A5 /* WCTransitions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCTransitions.h; sourceTree = "<group>"; };
+		FEC5EB381D09A278002E69A5 /* WCTransitionsDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCTransitionsDefine.h; sourceTree = "<group>"; };
+		FEC5EB441D09A2AF002E69A5 /* WPSwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSwipeView.h; sourceTree = "<group>"; };
+		FEC5EB451D09A2AF002E69A5 /* WPSwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPSwipeView.m; sourceTree = "<group>"; };
+		FEC5EB461D09A2AF002E69A5 /* WPSwipeViewDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPSwipeViewDefine.h; sourceTree = "<group>"; };
+		FEC5EB511D09A32F002E69A5 /* OPNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPNavigationView.h; sourceTree = "<group>"; };
+		FEC5EB521D09A32F002E69A5 /* OPNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPNavigationView.m; sourceTree = "<group>"; };
+		FEC5EB541D09A32F002E69A5 /* OPTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPTabBarView.h; sourceTree = "<group>"; };
+		FEC5EB551D09A32F002E69A5 /* OPTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPTabBarView.m; sourceTree = "<group>"; };
+		FEC5EB591D09A55A002E69A5 /* OPRoleCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPRoleCard.h; sourceTree = "<group>"; };
+		FEC5EB5A1D09A55A002E69A5 /* OPRoleCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPRoleCard.m; sourceTree = "<group>"; };
+		FEC5EB5C1D09A5CA002E69A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FEC5EB5E1D09B945002E69A5 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		FEC5EB5F1D09B945002E69A5 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		FEC5EB601D09B945002E69A5 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		FEC5EB611D09B945002E69A5 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		FEC5EB621D09B945002E69A5 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		FEC5EB631D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		FEC5EB641D09B945002E69A5 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		FEC5EB651D09B945002E69A5 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		FEC5EB661D09B945002E69A5 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
+		FEC5EB6B1D09C049002E69A5 /* OPRoleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPRoleViewController.h; sourceTree = "<group>"; };
+		FEC5EB6C1D09C049002E69A5 /* OPRoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPRoleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +274,7 @@
 				FEA949201D03045B00840844 /* Assets.xcassets */,
 				FEA949221D03045B00840844 /* LaunchScreen.storyboard */,
 				FEA949251D03045B00840844 /* Info.plist */,
+				FEC5EB5C1D09A5CA002E69A5 /* PrefixHeader.pch */,
 				FEA949141D03045B00840844 /* Supporting Files */,
 			);
 			path = MyOnePice;
@@ -457,6 +498,7 @@
 		FEA949C71D0323E200840844 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				FEC5EB5D1D09B8D6002E69A5 /* Thirds */,
 				FEA949C81D0323E200840844 /* Common */,
 				FEA949CD1D0323E200840844 /* Main */,
 				FEA949D21D0323E200840844 /* OnePice */,
@@ -487,6 +529,7 @@
 		FEA949CA1D0323E200840844 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				FEC5EB2C1D09A278002E69A5 /* WCTransitions */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -507,10 +550,10 @@
 		FEA949CC1D0323E200840844 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FEA949E21D03248B00840844 /* OPNavigationView.h */,
-				FEA949E31D03248B00840844 /* OPNavigationView.m */,
-				FEA949E51D0324AA00840844 /* OPTabBarView.h */,
-				FEA949E61D0324AA00840844 /* OPTabBarView.m */,
+				FEC5EB581D09A54B002E69A5 /* OPRoleCard */,
+				FEC5EB501D09A32F002E69A5 /* OPNavigationView */,
+				FEC5EB531D09A32F002E69A5 /* OPTabBarView */,
+				FEC5EB431D09A2AF002E69A5 /* WPSwipeView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -606,6 +649,8 @@
 		FEA949DA1D0323E200840844 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FEC5EB6B1D09C049002E69A5 /* OPRoleViewController.h */,
+				FEC5EB6C1D09C049002E69A5 /* OPRoleViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -634,6 +679,87 @@
 				FEA949F51D0333B100840844 /* OPViewControllerProtocol.h */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FEC5EB2C1D09A278002E69A5 /* WCTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5EB2D1D09A278002E69A5 /* UIView+WCTransition.h */,
+				FEC5EB2E1D09A278002E69A5 /* UIView+WCTransition.m */,
+				FEC5EB2F1D09A278002E69A5 /* WCAnimatedTransitioning.h */,
+				FEC5EB301D09A278002E69A5 /* WCAnimatedTransitioning.m */,
+				FEC5EB311D09A278002E69A5 /* WCTransitionAnimations.h */,
+				FEC5EB321D09A278002E69A5 /* WCTransitionAnimations.m */,
+				FEC5EB331D09A278002E69A5 /* WCTransitioningDelegate.h */,
+				FEC5EB341D09A278002E69A5 /* WCTransitioningDelegate.m */,
+				FEC5EB351D09A278002E69A5 /* WCTransitionManager.h */,
+				FEC5EB361D09A278002E69A5 /* WCTransitionManager.m */,
+				FEC5EB371D09A278002E69A5 /* WCTransitions.h */,
+				FEC5EB381D09A278002E69A5 /* WCTransitionsDefine.h */,
+			);
+			path = WCTransitions;
+			sourceTree = "<group>";
+		};
+		FEC5EB431D09A2AF002E69A5 /* WPSwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5EB441D09A2AF002E69A5 /* WPSwipeView.h */,
+				FEC5EB451D09A2AF002E69A5 /* WPSwipeView.m */,
+				FEC5EB461D09A2AF002E69A5 /* WPSwipeViewDefine.h */,
+			);
+			path = WPSwipeView;
+			sourceTree = "<group>";
+		};
+		FEC5EB501D09A32F002E69A5 /* OPNavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5EB511D09A32F002E69A5 /* OPNavigationView.h */,
+				FEC5EB521D09A32F002E69A5 /* OPNavigationView.m */,
+			);
+			path = OPNavigationView;
+			sourceTree = "<group>";
+		};
+		FEC5EB531D09A32F002E69A5 /* OPTabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5EB541D09A32F002E69A5 /* OPTabBarView.h */,
+				FEC5EB551D09A32F002E69A5 /* OPTabBarView.m */,
+			);
+			path = OPTabBarView;
+			sourceTree = "<group>";
+		};
+		FEC5EB581D09A54B002E69A5 /* OPRoleCard */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5EB591D09A55A002E69A5 /* OPRoleCard.h */,
+				FEC5EB5A1D09A55A002E69A5 /* OPRoleCard.m */,
+			);
+			path = OPRoleCard;
+			sourceTree = "<group>";
+		};
+		FEC5EB5D1D09B8D6002E69A5 /* Thirds */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5EB671D09B945002E69A5 /* PureLayout */,
+			);
+			path = Thirds;
+			sourceTree = "<group>";
+		};
+		FEC5EB671D09B945002E69A5 /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				FEC5EB5E1D09B945002E69A5 /* ALView+PureLayout.h */,
+				FEC5EB5F1D09B945002E69A5 /* ALView+PureLayout.m */,
+				FEC5EB601D09B945002E69A5 /* NSArray+PureLayout.h */,
+				FEC5EB611D09B945002E69A5 /* NSArray+PureLayout.m */,
+				FEC5EB621D09B945002E69A5 /* NSLayoutConstraint+PureLayout.h */,
+				FEC5EB631D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m */,
+				FEC5EB641D09B945002E69A5 /* PureLayout+Internal.h */,
+				FEC5EB651D09B945002E69A5 /* PureLayout.h */,
+				FEC5EB661D09B945002E69A5 /* PureLayoutDefines.h */,
+			);
+			name = PureLayout;
+			path = ../../../../../astonmartin/AstonMartin/ThirdLib/Categories/PureLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -707,17 +833,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEA9499B1D03048900840844 /* AFURLRequestSerialization.m in Sources */,
+				FEC5EB561D09A32F002E69A5 /* OPNavigationView.m in Sources */,
 				FEA9499A1D03048900840844 /* AFURLConnectionOperation.m in Sources */,
+				FEC5EB681D09B945002E69A5 /* ALView+PureLayout.m in Sources */,
 				FEA949841D03048900840844 /* SMBll.m in Sources */,
-				FEA949E41D03248B00840844 /* OPNavigationView.m in Sources */,
 				FEA9498F1D03048900840844 /* UIView+SMFrame.m in Sources */,
 				FEA9498D1D03048900840844 /* NSString+SM.m in Sources */,
 				FEA9499D1D03048900840844 /* AFURLSessionManager.m in Sources */,
+				FEC5EB3B1D09A278002E69A5 /* WCTransitionAnimations.m in Sources */,
+				FEC5EB391D09A278002E69A5 /* UIView+WCTransition.m in Sources */,
 				FEA949911D03048900840844 /* SMDAO.m in Sources */,
 				FEA949991D03048900840844 /* AFSecurityPolicy.m in Sources */,
 				FEC5E1F71D07A489002191CD /* OnePiceServer.m in Sources */,
+				FEC5EB5B1D09A55A002E69A5 /* OPRoleCard.m in Sources */,
 				FEA949951D03048900840844 /* AFHTTPRequestOperation.m in Sources */,
 				FEA949871D03048900840844 /* FMDatabase.m in Sources */,
+				FEC5EB471D09A2AF002E69A5 /* WPSwipeView.m in Sources */,
 				FEA9499E1D03048900840844 /* SMAFNClient.m in Sources */,
 				FEA949FB1D0337FC00840844 /* OPCarbonViewController.m in Sources */,
 				FEA949DD1D0323E200840844 /* AppDelegate.m in Sources */,
@@ -725,6 +856,7 @@
 				FEA949EA1D0324E100840844 /* OPTabBarController.m in Sources */,
 				FEA949F81D03350200840844 /* OPMeViewController.m in Sources */,
 				FEA949ED1D0328B100840844 /* OpBaseViewController.m in Sources */,
+				FEC5EB3D1D09A278002E69A5 /* WCTransitionManager.m in Sources */,
 				FEA949891D03048900840844 /* FMDatabasePool.m in Sources */,
 				FEA949921D03048900840844 /* SMLogSys.m in Sources */,
 				FEA9498A1D03048900840844 /* FMDatabaseQueue.m in Sources */,
@@ -735,6 +867,7 @@
 				FEC5EB251D0912EC002E69A5 /* OPModel.m in Sources */,
 				FEA949971D03048900840844 /* AFHTTPSessionManager.m in Sources */,
 				FEA949931D03048900840844 /* NSUserDefaults+SMModel.m in Sources */,
+				FEC5EB3A1D09A278002E69A5 /* WCAnimatedTransitioning.m in Sources */,
 				FEA949941D03048900840844 /* SMModel.m in Sources */,
 				FEA949851D03048900840844 /* SMDBHelper.m in Sources */,
 				FEA949961D03048900840844 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -742,15 +875,19 @@
 				FEC5EB2B1D099F4C002E69A5 /* OPDataBaseHelper.m in Sources */,
 				FEA949A01D03048900840844 /* SMRequestQueue.m in Sources */,
 				FEA949E11D0323F100840844 /* OPNavigationController.m in Sources */,
+				FEC5EB691D09B945002E69A5 /* NSArray+PureLayout.m in Sources */,
 				FEA949901D03048900840844 /* SMAPI.m in Sources */,
 				FEA949161D03045B00840844 /* main.m in Sources */,
+				FEC5EB571D09A32F002E69A5 /* OPTabBarView.m in Sources */,
 				FEA949881D03048900840844 /* FMDatabaseAdditions.m in Sources */,
+				FEC5EB3C1D09A278002E69A5 /* WCTransitioningDelegate.m in Sources */,
 				FEA949DE1D0323E200840844 /* OPRootViewController.m in Sources */,
 				FEA949FE1D03384F00840844 /* OPMainViewController.m in Sources */,
 				FE0194AF1D0861910019B04C /* SMServerModel.m in Sources */,
 				FEA949981D03048900840844 /* AFNetworkReachabilityManager.m in Sources */,
+				FEC5EB6D1D09C049002E69A5 /* OPRoleViewController.m in Sources */,
+				FEC5EB6A1D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m in Sources */,
 				FEC5EB281D099A2B002E69A5 /* OPDal.m in Sources */,
-				FEA949E71D0324AA00840844 /* OPTabBarView.m in Sources */,
 				FEA9499C1D03048900840844 /* AFURLResponseSerialization.m in Sources */,
 				FEA949A11D03048900840844 /* SMUrlRequest+SM.m in Sources */,
 				FEA9498E1D03048900840844 /* UIDevice+SM.m in Sources */,
@@ -865,6 +1002,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = MyOnePice/PrefixHeader.pch;
 				INFOPLIST_FILE = MyOnePice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sumrise.com.MyOnePice;
@@ -876,6 +1014,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = MyOnePice/PrefixHeader.pch;
 				INFOPLIST_FILE = MyOnePice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = sumrise.com.MyOnePice;

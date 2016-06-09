@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "871A0EA951C5E6A229512F3006F2D28A403C5A29",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "871A0EA951C5E6A229512F3006F2D28A403C5A29" : 0,
+    "F3A4379434A4BE6A27C7E64AE5F9F0E3F94A92DF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "99CF7488-23F5-4EC5-9DB6-AE18377DFD3B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "871A0EA951C5E6A229512F3006F2D28A403C5A29" : "MyOnePice\/",
+    "F3A4379434A4BE6A27C7E64AE5F9F0E3F94A92DF" : "..\/astonmartin"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MyOnePice",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MyOnePice.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:sghick\/MyOnePice.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "871A0EA951C5E6A229512F3006F2D28A403C5A29"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "git.shequan.com:zhanghao\/astonmartin.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F3A4379434A4BE6A27C7E64AE5F9F0E3F94A92DF"
+    }
+  ]
+}

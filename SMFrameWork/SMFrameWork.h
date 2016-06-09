@@ -11,13 +11,9 @@
 
 #warning 框架结构的头文件定义在这里
 #import "SMCate.h"
-#import "SMHeader.h"
 #import "SMLog.h"
 #import "SMConfig.h"
-#import "UIView+SMAttributies.h"
-
-// 可以使用Pod管理
-#import "AFNetworking.h"
-#import "MJRefresh.h"
+#import "UIHeader.h"
+#import "DataHeader.h"
 
 #endif

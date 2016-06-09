@@ -104,14 +104,14 @@
     return NO;
 }
 
-- (BOOL)sms_isIPhone6 {
+- (BOOL)sms_isIPhone6x {
     if ([[UIScreen mainScreen] bounds].size.height == 667) {
         return YES;
     }
     return NO;
 }
 
-- (BOOL)sms_isIphone6Plus {
+- (BOOL)sms_isIphone6xPlus {
     if ([[UIScreen mainScreen] bounds].size.height == 736) {
         return YES;
     }
