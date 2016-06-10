@@ -51,4 +51,20 @@
     return del;
 }
 
++ (WCTransitioningDelegate *)transitionForTransDelegate3 {
+    WCAnimatedTransitioning *single = [[WCAnimatedTransitioning alloc] init];
+    [single setHandleDelegatePresentedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *presented, UIViewController *presenting, UIViewController *source) {
+        transitioning.duration = 0.2;
+        transitioning.wc_options = WCViewAnimationOptionsPointBlowup;
+        transitioning.transitionBlock = [WCTransitionAnimations animateBlockForBlowup2];
+    }];
+    [single setHandleDelegateDismissedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *dismissed) {
+        transitioning.duration = 0.2;
+        transitioning.wc_options = WCViewAnimationOptionsPointLetting;
+        transitioning.transitionBlock = [WCTransitionAnimations animateBlockForLetting2];
+    }];
+    WCTransitioningDelegate *del = [[WCTransitioningDelegate alloc] initWithSingleAnimatedTransitioning:single];
+    return del;
+}
+
 @end

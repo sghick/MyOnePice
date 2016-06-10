@@ -14,9 +14,14 @@
 //系统翻转
 + (WCAnimateTransitionBlock)animateBlockForSingle;
 
-//圆形放大(仅限首页展示所有车辆时使用)
+//圆形放大
 + (WCAnimateTransitionBlock)animateBlockForBlowup1;
-//圆形缩小(仅限首页展示所有车辆时使用)
+//圆形缩小
 + (WCAnimateTransitionBlock)animateBlockForLetting1;
+
+//矩形放大
++ (WCAnimateTransitionBlock)animateBlockForBlowup2;
+//矩形缩小
++ (WCAnimateTransitionBlock)animateBlockForLetting2;
 
 @end

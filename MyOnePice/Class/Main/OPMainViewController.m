@@ -138,7 +138,7 @@ static NSString *swipeViewIdentifier = @"vehicleViewIdentifier";
 
 - (WCTransitioningDelegate *)transDelegate {
     if (_transDelegate == nil) {
-        _transDelegate = [WCTransitionManager transitionForTransDelegate2];
+        _transDelegate = [WCTransitionManager transitionForTransDelegate3];
     }
     return _transDelegate;
 }

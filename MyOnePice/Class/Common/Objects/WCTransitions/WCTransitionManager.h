@@ -18,8 +18,13 @@
 + (WCTransitioningDelegate *)transitionForTransDelegate1;
 
 /**
- *  圆形放大缩小(仅限首页展示所有车辆时使用:present)
+ *  圆形放大缩小
  */
 + (WCTransitioningDelegate *)transitionForTransDelegate2;
+
+/**
+ *  矩形放大缩小
+ */
++ (WCTransitioningDelegate *)transitionForTransDelegate3;
 
 @end

@@ -69,4 +69,58 @@
     return block;
 }
 
++ (WCAnimateTransitionBlock)animateBlockForBlowup2 {
+    WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
+        UINavigationController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+        
+        UIView *toView = toVC.view;
+        UIView *containerView = [transitionContext containerView];
+        CGRect frame = containerView.bounds;
+        frame = UIEdgeInsetsInsetRect(frame, UIEdgeInsetsMake(0, 0, 0, 0));
+        toView.frame = frame;
+        [containerView addSubview:toView];
+        toView.alpha = 0.0;
+        toView.transform = CGAffineTransformMakeScale(0.3, 0.3);
+        [UIView animateWithDuration:transitioning.duration / 2.0 animations:^{
+            toView.alpha = 1.0;
+        }];
+        CGFloat damping = 0.55;
+        [UIView animateWithDuration:transitioning.duration delay:0.0 usingSpringWithDamping:damping initialSpringVelocity:1.0 / damping options:0 animations:^{
+            toView.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    };
+    return block;
+}
+
++ (WCAnimateTransitionBlock)animateBlockForLetting2 {
+    WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
+        UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+        
+        UIView *fromView = fromVC.view;
+        [UIView animateWithDuration:3.0 * transitioning.duration / 4.0
+                              delay:transitioning.duration / 4.0
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             fromView.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished) {
+                             [fromView removeFromSuperview];
+                             [transitionContext completeTransition:YES];
+                         }];
+        
+        [UIView animateWithDuration:2.0 * transitioning.duration
+                              delay:0.0
+             usingSpringWithDamping:1.0
+              initialSpringVelocity:-15.0
+                            options:0
+                         animations:^{
+                             fromView.transform = CGAffineTransformMakeScale(0.3, 0.3);
+                         }
+                         completion:nil];
+    };
+    return block;
+}
+
 @end
