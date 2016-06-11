@@ -43,12 +43,8 @@
 
 + (WCAnimateTransitionBlock)animateBlockForBlowup1 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
-        UINavigationController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-        UITabBarController *fromNav = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-        id<WCAnimationViewControllerDelegate> fromVC = (id<WCAnimationViewControllerDelegate>)((UINavigationController *)fromNav.viewControllers.firstObject).viewControllers.firstObject;
-
-        UIView *fromView = fromVC.animationView;
-        UIView *toView = toVC.view;
+        UIView *fromView = transitioning.fromVC.animationView;
+        UIView *toView = transitioning.toVC.view;
         
         [UIView wc_transitionFromView:fromView toView:toView transitionContext:transitionContext animatedTransitioning:transitioning options:WCViewAnimationOptionsPointBlowup completion:nil];
     };
@@ -57,12 +53,8 @@
 
 + (WCAnimateTransitionBlock)animateBlockForLetting1 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
-        UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-        UITabBarController *toNav = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-        id<WCAnimationViewControllerDelegate> toVC = (id<WCAnimationViewControllerDelegate>)((UINavigationController *)toNav.viewControllers.firstObject).viewControllers.firstObject;
-        
-        UIView *fromView = fromVC.view;
-        UIView *toView = toVC.animationView;
+        UIView *fromView = transitioning.fromVC.view;
+        UIView *toView = transitioning.toVC.animationView;
         
         [UIView wc_transitionFromView:fromView toView:toView transitionContext:transitionContext animatedTransitioning:transitioning options:WCViewAnimationOptionsPointLetting completion:nil];
     };
@@ -71,9 +63,7 @@
 
 + (WCAnimateTransitionBlock)animateBlockForBlowup2 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
-        UINavigationController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-        
-        UIView *toView = toVC.view;
+        UIView *toView = transitioning.toVC.view;
         UIView *containerView = [transitionContext containerView];
         CGRect frame = containerView.bounds;
         frame = UIEdgeInsetsInsetRect(frame, UIEdgeInsetsMake(0, 0, 0, 0));
@@ -96,9 +86,7 @@
 
 + (WCAnimateTransitionBlock)animateBlockForLetting2 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
-        UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-        
-        UIView *fromView = fromVC.view;
+        UIView *fromView = transitioning.fromVC.view;
         [UIView animateWithDuration:3.0 * transitioning.duration / 4.0
                               delay:transitioning.duration / 4.0
                             options:UIViewAnimationOptionCurveEaseIn
@@ -125,12 +113,8 @@
 
 + (WCAnimateTransitionBlock)animateBlockForBlowup3 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
-        UINavigationController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-        UITabBarController *fromNav = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-        id<WCAnimationViewControllerDelegate> fromVC = (id<WCAnimationViewControllerDelegate>)((UINavigationController *)fromNav.viewControllers[1]).viewControllers.firstObject;
-        
-        UIView *fromView = fromVC.animationView;
-        UIView *toView = toVC.view;
+        UIView *fromView = transitioning.fromVC.animationView;
+        UIView *toView = transitioning.toVC.view;
         UIView *containerView = [transitionContext containerView];
         [containerView addSubview:toView];
         
@@ -152,12 +136,8 @@
 
 + (WCAnimateTransitionBlock)animateBlockForLetting3 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
-        UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-        UITabBarController *toNav = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-        id<WCAnimationViewControllerDelegate> toVC = (id<WCAnimationViewControllerDelegate>)((UINavigationController *)toNav.viewControllers[1]).viewControllers.firstObject;
-        
-        UIView *fromView = fromVC.view;
-        UIView *toView = toVC.animationView;
+        UIView *fromView = transitioning.fromVC.view;
+        UIView *toView = transitioning.toVC.animationView;
         
         [UIView animateWithDuration:3.0 * transitioning.duration / 4.0
                               delay:transitioning.duration / 4.0

@@ -67,6 +67,11 @@ typedef NS_ENUM(NSInteger, WCTransitioningDelegateType) {
     WCTransitioningDelegateSingle,  // 推出和收起只用一个动画
 };
 
+typedef NS_ENUM(NSInteger, WCTransitioningDelegateVCType) {
+    WCTransitioningDelegateVCFrom,
+    WCTransitioningDelegateVCTo,
+};
+
 typedef NS_ENUM(NSInteger, WCViewAnimationOptions) {
     WCViewAnimationOptionsNone,             // 无
     WCViewAnimationOptionsPointBlowup,      // 圆点扩散

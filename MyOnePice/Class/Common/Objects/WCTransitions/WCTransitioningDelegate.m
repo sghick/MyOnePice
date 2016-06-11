@@ -52,6 +52,7 @@
             break;
         case WCTransitioningDelegateSingle: {
             trans = self.single;
+            trans.transVCType = WCTransitioningDelegateVCFrom;
         }
             break;
         default:
@@ -74,6 +75,7 @@
             break;
         case WCTransitioningDelegateSingle: {
             trans = self.single;
+            trans.transVCType = WCTransitioningDelegateVCTo;
         }
             break;
         default:
@@ -114,6 +116,13 @@
             break;
         case WCTransitioningDelegateSingle: {
             trans = self.single;
+            if (operation == UINavigationControllerOperationPush) {
+                trans.transVCType = WCTransitioningDelegateVCFrom;
+            } else if (operation == UINavigationControllerOperationPop) {
+                trans.transVCType = WCTransitioningDelegateVCTo;
+            } else {
+                // none
+            }
         }
             break;
         default:
@@ -123,6 +132,18 @@
         trans.handleDelegateNavBarControllerBlock(trans, navigationController, operation, fromVC, toVC);
     }
     return trans;
+}
+
+- (void)setFromViewController:(UIViewController<WCAnimationViewControllerDelegate> *)fromVC toViewController:(UIViewController<WCAnimationViewControllerDelegate> *)toVC {
+    if (self.fromTrans) {
+        [self.fromTrans setFromViewController:fromVC toViewController:toVC];
+    }
+    if (self.toTrans) {
+        [self.toTrans setFromViewController:toVC toViewController:fromVC];
+    }
+    if (self.single) {
+        [self.single setFromViewController:fromVC toViewController:toVC];
+    }
 }
 
 @end

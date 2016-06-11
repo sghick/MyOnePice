@@ -8,6 +8,13 @@
 
 #import "WCAnimatedTransitioning.h"
 
+@interface WCAnimatedTransitioning ()
+
+@property (weak  , nonatomic) UIViewController<WCAnimationViewControllerDelegate> *iniFromVC;
+@property (weak  , nonatomic) UIViewController<WCAnimationViewControllerDelegate> *iniToVC;
+
+@end
+
 @implementation WCAnimatedTransitioning
 
 - (instancetype)init {
@@ -46,6 +53,31 @@
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     if (self.animationDidStopDelegateBlock) {
         self.animationDidStopDelegateBlock(self, anim, flag);
+    }
+}
+
+- (void)setFromViewController:(UIViewController<WCAnimationViewControllerDelegate> *)fromVC toViewController:(UIViewController<WCAnimationViewControllerDelegate> *)toVC {
+    _fromVC = fromVC;
+    _toVC = toVC;
+    _iniFromVC = fromVC;
+    _iniToVC = toVC;
+}
+
+- (void)setTransVCType:(WCTransitioningDelegateVCType)transVCType {
+    switch (transVCType) {
+        case WCTransitioningDelegateVCFrom: {
+            _fromVC = _iniFromVC;
+            _toVC = _iniToVC;
+        }
+            break;
+        case WCTransitioningDelegateVCTo: {
+            _fromVC = _iniToVC;
+            _toVC = _iniFromVC;
+        }
+            break;
+            
+        default:
+            break;
     }
 }
 

@@ -51,6 +51,7 @@ static NSString *swipeViewIdentifier = @"vehicleViewIdentifier";
 #pragma mark - OPRoleCardDelegate
 - (void)roleCard:(OPRoleCard *)roleCard didTouchedBtn:(UIButton *)sender {
     OPRoleViewController *vc = [[OPRoleViewController alloc] init];
+    [self.transDelegate setFromViewController:self toViewController:vc];
     vc.modalPresentationStyle = UIModalPresentationCustom;
     vc.transitioningDelegate = self.transDelegate;
     [self presentViewController:vc animated:YES completion:nil];
@@ -110,7 +111,7 @@ static NSString *swipeViewIdentifier = @"vehicleViewIdentifier";
 
 - (WCTransitioningDelegate *)transDelegate {
     if (_transDelegate == nil) {
-        _transDelegate = [WCTransitionManager transitionForTransDelegate4];
+        _transDelegate = [WCTransitionManager transitionForTransDelegate1];
     }
     return _transDelegate;
 }

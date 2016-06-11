@@ -20,6 +20,9 @@
         transitioning.options = (operation == UINavigationControllerOperationPush
                                  ? UIViewAnimationOptionTransitionFlipFromRight
                                  : UIViewAnimationOptionTransitionFlipFromLeft);
+        transitioning.transVCType = (operation == UINavigationControllerOperationPush
+                                 ? WCTransitioningDelegateVCFrom
+                                 : WCTransitioningDelegateVCTo);
     }];
     [single setHandleDelegateTabBarControllerBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *tabBarController, UIViewController *fromVC, UIViewController *toVC) {
         transitioning.options = UIViewAnimationOptionTransitionCrossDissolve;
@@ -38,13 +41,9 @@
 + (WCTransitioningDelegate *)transitionForTransDelegate2 {
     WCAnimatedTransitioning *single = [[WCAnimatedTransitioning alloc] init];
     [single setHandleDelegatePresentedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *presented, UIViewController *presenting, UIViewController *source) {
-        transitioning.duration = 0.2;
-        transitioning.wc_options = WCViewAnimationOptionsPointBlowup;
         transitioning.transitionBlock = [WCTransitionAnimations animateBlockForBlowup1];
     }];
     [single setHandleDelegateDismissedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *dismissed) {
-        transitioning.duration = 0.2;
-        transitioning.wc_options = WCViewAnimationOptionsPointLetting;
         transitioning.transitionBlock = [WCTransitionAnimations animateBlockForLetting1];
     }];
     WCTransitioningDelegate *del = [[WCTransitioningDelegate alloc] initWithSingleAnimatedTransitioning:single];
@@ -54,13 +53,9 @@
 + (WCTransitioningDelegate *)transitionForTransDelegate3 {
     WCAnimatedTransitioning *single = [[WCAnimatedTransitioning alloc] init];
     [single setHandleDelegatePresentedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *presented, UIViewController *presenting, UIViewController *source) {
-        transitioning.duration = 0.2;
-        transitioning.wc_options = WCViewAnimationOptionsPointBlowup;
         transitioning.transitionBlock = [WCTransitionAnimations animateBlockForBlowup2];
     }];
     [single setHandleDelegateDismissedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *dismissed) {
-        transitioning.duration = 0.2;
-        transitioning.wc_options = WCViewAnimationOptionsPointLetting;
         transitioning.transitionBlock = [WCTransitionAnimations animateBlockForLetting2];
     }];
     WCTransitioningDelegate *del = [[WCTransitioningDelegate alloc] initWithSingleAnimatedTransitioning:single];
@@ -70,14 +65,12 @@
 + (WCTransitioningDelegate *)transitionForTransDelegate4 {
     WCAnimatedTransitioning *single = [[WCAnimatedTransitioning alloc] init];
     [single setHandleDelegatePresentedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *presented, UIViewController *presenting, UIViewController *source) {
-        transitioning.duration = 0.2;
-        transitioning.wc_options = WCViewAnimationOptionsPointBlowup;
         transitioning.transitionBlock = [WCTransitionAnimations animateBlockForBlowup3];
+        transitioning.transVCType = WCTransitioningDelegateVCFrom;
     }];
     [single setHandleDelegateDismissedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *dismissed) {
-        transitioning.duration = 0.2;
-        transitioning.wc_options = WCViewAnimationOptionsPointLetting;
         transitioning.transitionBlock = [WCTransitionAnimations animateBlockForLetting3];
+        transitioning.transVCType = WCTransitioningDelegateVCTo;
     }];
     WCTransitioningDelegate *del = [[WCTransitioningDelegate alloc] initWithSingleAnimatedTransitioning:single];
     return del;
