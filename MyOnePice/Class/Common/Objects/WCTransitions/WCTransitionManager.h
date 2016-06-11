@@ -27,4 +27,9 @@
  */
 + (WCTransitioningDelegate *)transitionForTransDelegate3;
 
+/**
+ *  神奇移动
+ */
++ (WCTransitioningDelegate *)transitionForTransDelegate4;
+
 @end

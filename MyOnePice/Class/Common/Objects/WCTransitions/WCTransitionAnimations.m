@@ -123,4 +123,64 @@
     return block;
 }
 
++ (WCAnimateTransitionBlock)animateBlockForBlowup3 {
+    WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
+        UINavigationController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+        UITabBarController *fromNav = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+        id<WCAnimationViewControllerDelegate> fromVC = (id<WCAnimationViewControllerDelegate>)((UINavigationController *)fromNav.viewControllers.firstObject).viewControllers.firstObject;
+        
+        UIView *fromView = fromVC.animationView;
+        UIView *toView = toVC.view;
+        UIView *containerView = [transitionContext containerView];
+        [containerView addSubview:toView];
+        
+        toView.alpha = 0.0;
+        toView.frame = fromView.frame;
+        [UIView animateWithDuration:transitioning.duration / 2.0 animations:^{
+            toView.alpha = 1.0;
+            toView.frame = containerView.bounds;
+        }];
+        CGFloat damping = 0.55;
+        [UIView animateWithDuration:transitioning.duration delay:0.0 usingSpringWithDamping:damping initialSpringVelocity:1.0 / damping options:0 animations:^{
+            toView.transform = CGAffineTransformIdentity;
+        } completion:^(BOOL finished) {
+            [transitionContext completeTransition:YES];
+        }];
+    };
+    return block;
+}
+
++ (WCAnimateTransitionBlock)animateBlockForLetting3 {
+    WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
+        UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+        UITabBarController *toNav = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+        id<WCAnimationViewControllerDelegate> toVC = (id<WCAnimationViewControllerDelegate>)((UINavigationController *)toNav.viewControllers.firstObject).viewControllers.firstObject;
+        
+        UIView *fromView = fromVC.view;
+        UIView *toView = toVC.animationView;
+        
+        [UIView animateWithDuration:3.0 * transitioning.duration / 4.0
+                              delay:transitioning.duration / 4.0
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             fromView.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished) {
+                             [fromView removeFromSuperview];
+                             [transitionContext completeTransition:YES];
+                         }];
+        
+        [UIView animateWithDuration:2.0 * transitioning.duration
+                              delay:0.0
+             usingSpringWithDamping:1.0
+              initialSpringVelocity:-15.0
+                            options:0
+                         animations:^{
+                             fromView.frame = toView.frame;
+                         }
+                         completion:nil];
+    };
+    return block;
+}
+
 @end

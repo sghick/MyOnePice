@@ -24,4 +24,9 @@
 //矩形缩小
 + (WCAnimateTransitionBlock)animateBlockForLetting2;
 
+//神奇移动放大
++ (WCAnimateTransitionBlock)animateBlockForBlowup3;
+//神奇移动缩小
++ (WCAnimateTransitionBlock)animateBlockForLetting3;
+
 @end
