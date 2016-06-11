@@ -7,7 +7,10 @@
 //
 
 #import "OpBaseViewController.h"
+#import "WCTransitionsDefine.h"
 
-@interface OPMeViewController : OpBaseViewController
+@interface OPMeViewController : OpBaseViewController<WCAnimationViewControllerDelegate>
+
+- (UIView *)animationView;
 
 @end
