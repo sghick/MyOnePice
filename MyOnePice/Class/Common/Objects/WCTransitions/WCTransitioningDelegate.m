@@ -134,7 +134,7 @@
     return trans;
 }
 
-- (void)setFromViewController:(UIViewController<WCAnimationViewControllerDelegate> *)fromVC toViewController:(UIViewController<WCAnimationViewControllerDelegate> *)toVC {
+- (void)setFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
     if (self.fromTrans) {
         [self.fromTrans setFromViewController:fromVC toViewController:toVC];
     }

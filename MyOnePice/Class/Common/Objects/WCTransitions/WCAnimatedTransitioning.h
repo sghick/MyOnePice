@@ -56,8 +56,8 @@
  */
 @property (assign, nonatomic) WCTransitioningDelegateVCType transVCType;
 
-@property (weak  , nonatomic, readonly) UIViewController<WCAnimationViewControllerDelegate> *fromVC;
-@property (weak  , nonatomic, readonly) UIViewController<WCAnimationViewControllerDelegate> *toVC;
+@property (weak  , nonatomic, readonly) UIViewController *fromVC;
+@property (weak  , nonatomic, readonly) UIViewController *toVC;
 
 #pragma mark - DelegateBlock
 /**
@@ -87,6 +87,6 @@
 /**
  *  设置fromVC和toVC
  */
-- (void)setFromViewController:(UIViewController<WCAnimationViewControllerDelegate> *)fromVC toViewController:(UIViewController<WCAnimationViewControllerDelegate> *)toVC;
+- (void)setFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC;
 
 @end

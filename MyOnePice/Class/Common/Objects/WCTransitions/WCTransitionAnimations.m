@@ -43,7 +43,7 @@
 
 + (WCAnimateTransitionBlock)animateBlockForBlowup1 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
-        UIView *fromView = transitioning.fromVC.animationView;
+        UIView *fromView = ((UIViewController<WCAnimationViewControllerDelegate> *)transitioning.fromVC).animationView;
         UIView *toView = transitioning.toVC.view;
         
         [UIView wc_transitionFromView:fromView toView:toView transitionContext:transitionContext animatedTransitioning:transitioning options:WCViewAnimationOptionsPointBlowup completion:nil];
@@ -54,7 +54,7 @@
 + (WCAnimateTransitionBlock)animateBlockForLetting1 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
         UIView *fromView = transitioning.fromVC.view;
-        UIView *toView = transitioning.toVC.animationView;
+        UIView *toView = ((UIViewController<WCAnimationViewControllerDelegate> *)transitioning.toVC).animationView;
         
         [UIView wc_transitionFromView:fromView toView:toView transitionContext:transitionContext animatedTransitioning:transitioning options:WCViewAnimationOptionsPointLetting completion:nil];
     };
@@ -113,7 +113,7 @@
 
 + (WCAnimateTransitionBlock)animateBlockForBlowup3 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
-        UIView *fromView = transitioning.fromVC.animationView;
+        UIView *fromView = ((UIViewController<WCAnimationViewControllerDelegate> *)transitioning.fromVC).animationView;
         UIView *toView = transitioning.toVC.view;
         UIView *containerView = [transitionContext containerView];
         [containerView addSubview:toView];
@@ -137,7 +137,7 @@
 + (WCAnimateTransitionBlock)animateBlockForLetting3 {
     WCAnimateTransitionBlock block = ^(id<UIViewControllerContextTransitioning> transitionContext, WCAnimatedTransitioning *transitioning) {
         UIView *fromView = transitioning.fromVC.view;
-        UIView *toView = transitioning.toVC.animationView;
+        UIView *toView = ((UIViewController<WCAnimationViewControllerDelegate> *)transitioning.toVC).animationView;
         
         [UIView animateWithDuration:3.0 * transitioning.duration / 4.0
                               delay:transitioning.duration / 4.0
