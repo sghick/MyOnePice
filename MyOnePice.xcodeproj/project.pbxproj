@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2344591D0D00B70063D77C /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2344511D0D00B70063D77C /* ALView+PureLayout.m */; };
+		BD23445A1D0D00B70063D77C /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2344531D0D00B70063D77C /* NSArray+PureLayout.m */; };
+		BD23445B1D0D00B70063D77C /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = BD2344551D0D00B70063D77C /* NSLayoutConstraint+PureLayout.m */; };
 		FE0194AF1D0861910019B04C /* SMServerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0194AE1D0861910019B04C /* SMServerModel.m */; };
 		FE0194B31D08636A0019B04C /* ServerDal.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0194B21D08636A0019B04C /* ServerDal.m */; };
 		FE05D0A81D0E3C580050EE12 /* UIView+WCTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = FE05D09B1D0E3C580050EE12 /* UIView+WCTransition.m */; };
@@ -68,13 +71,19 @@
 		FEC5EB561D09A32F002E69A5 /* OPNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB521D09A32F002E69A5 /* OPNavigationView.m */; };
 		FEC5EB571D09A32F002E69A5 /* OPTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB551D09A32F002E69A5 /* OPTabBarView.m */; };
 		FEC5EB5B1D09A55A002E69A5 /* OPRoleCard.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB5A1D09A55A002E69A5 /* OPRoleCard.m */; };
-		FEC5EB681D09B945002E69A5 /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB5F1D09B945002E69A5 /* ALView+PureLayout.m */; };
-		FEC5EB691D09B945002E69A5 /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB611D09B945002E69A5 /* NSArray+PureLayout.m */; };
-		FEC5EB6A1D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB631D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m */; };
 		FEC5EB6D1D09C049002E69A5 /* OPRoleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC5EB6C1D09C049002E69A5 /* OPRoleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD2344501D0D00B70063D77C /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
+		BD2344511D0D00B70063D77C /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
+		BD2344521D0D00B70063D77C /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		BD2344531D0D00B70063D77C /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		BD2344541D0D00B70063D77C /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		BD2344551D0D00B70063D77C /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		BD2344561D0D00B70063D77C /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
+		BD2344571D0D00B70063D77C /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
+		BD2344581D0D00B70063D77C /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		FE0194AD1D0861910019B04C /* SMServerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMServerModel.h; sourceTree = "<group>"; };
 		FE0194AE1D0861910019B04C /* SMServerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMServerModel.m; sourceTree = "<group>"; };
 		FE0194B11D08636A0019B04C /* ServerDal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerDal.h; sourceTree = "<group>"; };
@@ -210,15 +219,6 @@
 		FEC5EB591D09A55A002E69A5 /* OPRoleCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPRoleCard.h; sourceTree = "<group>"; };
 		FEC5EB5A1D09A55A002E69A5 /* OPRoleCard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPRoleCard.m; sourceTree = "<group>"; };
 		FEC5EB5C1D09A5CA002E69A5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		FEC5EB5E1D09B945002E69A5 /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ALView+PureLayout.h"; sourceTree = "<group>"; };
-		FEC5EB5F1D09B945002E69A5 /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALView+PureLayout.m"; sourceTree = "<group>"; };
-		FEC5EB601D09B945002E69A5 /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+PureLayout.h"; sourceTree = "<group>"; };
-		FEC5EB611D09B945002E69A5 /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+PureLayout.m"; sourceTree = "<group>"; };
-		FEC5EB621D09B945002E69A5 /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
-		FEC5EB631D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
-		FEC5EB641D09B945002E69A5 /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PureLayout+Internal.h"; sourceTree = "<group>"; };
-		FEC5EB651D09B945002E69A5 /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayout.h; sourceTree = "<group>"; };
-		FEC5EB661D09B945002E69A5 /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PureLayoutDefines.h; sourceTree = "<group>"; };
 		FEC5EB6B1D09C049002E69A5 /* OPRoleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPRoleViewController.h; sourceTree = "<group>"; };
 		FEC5EB6C1D09C049002E69A5 /* OPRoleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPRoleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -235,6 +235,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD23444F1D0D00B70063D77C /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				BD2344501D0D00B70063D77C /* ALView+PureLayout.h */,
+				BD2344511D0D00B70063D77C /* ALView+PureLayout.m */,
+				BD2344521D0D00B70063D77C /* NSArray+PureLayout.h */,
+				BD2344531D0D00B70063D77C /* NSArray+PureLayout.m */,
+				BD2344541D0D00B70063D77C /* NSLayoutConstraint+PureLayout.h */,
+				BD2344551D0D00B70063D77C /* NSLayoutConstraint+PureLayout.m */,
+				BD2344561D0D00B70063D77C /* PureLayout+Internal.h */,
+				BD2344571D0D00B70063D77C /* PureLayout.h */,
+				BD2344581D0D00B70063D77C /* PureLayoutDefines.h */,
+			);
+			path = PureLayout;
+			sourceTree = "<group>";
+		};
 		FE0194A91D0861060019B04C /* ServerModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,26 +766,9 @@
 		FEC5EB5D1D09B8D6002E69A5 /* Thirds */ = {
 			isa = PBXGroup;
 			children = (
-				FEC5EB671D09B945002E69A5 /* PureLayout */,
+				BD23444F1D0D00B70063D77C /* PureLayout */,
 			);
 			path = Thirds;
-			sourceTree = "<group>";
-		};
-		FEC5EB671D09B945002E69A5 /* PureLayout */ = {
-			isa = PBXGroup;
-			children = (
-				FEC5EB5E1D09B945002E69A5 /* ALView+PureLayout.h */,
-				FEC5EB5F1D09B945002E69A5 /* ALView+PureLayout.m */,
-				FEC5EB601D09B945002E69A5 /* NSArray+PureLayout.h */,
-				FEC5EB611D09B945002E69A5 /* NSArray+PureLayout.m */,
-				FEC5EB621D09B945002E69A5 /* NSLayoutConstraint+PureLayout.h */,
-				FEC5EB631D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m */,
-				FEC5EB641D09B945002E69A5 /* PureLayout+Internal.h */,
-				FEC5EB651D09B945002E69A5 /* PureLayout.h */,
-				FEC5EB661D09B945002E69A5 /* PureLayoutDefines.h */,
-			);
-			name = PureLayout;
-			path = ../../../../../astonmartin/AstonMartin/ThirdLib/Categories/PureLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -845,7 +844,6 @@
 				FEA9499B1D03048900840844 /* AFURLRequestSerialization.m in Sources */,
 				FEC5EB561D09A32F002E69A5 /* OPNavigationView.m in Sources */,
 				FEA9499A1D03048900840844 /* AFURLConnectionOperation.m in Sources */,
-				FEC5EB681D09B945002E69A5 /* ALView+PureLayout.m in Sources */,
 				FEA949841D03048900840844 /* SMBll.m in Sources */,
 				FEA9498F1D03048900840844 /* UIView+SMFrame.m in Sources */,
 				FEA9498D1D03048900840844 /* NSString+SM.m in Sources */,
@@ -858,7 +856,9 @@
 				FEC5EB5B1D09A55A002E69A5 /* OPRoleCard.m in Sources */,
 				FEA949951D03048900840844 /* AFHTTPRequestOperation.m in Sources */,
 				FEA949871D03048900840844 /* FMDatabase.m in Sources */,
+				BD23445B1D0D00B70063D77C /* NSLayoutConstraint+PureLayout.m in Sources */,
 				FEC5EB471D09A2AF002E69A5 /* WPSwipeView.m in Sources */,
+				BD2344591D0D00B70063D77C /* ALView+PureLayout.m in Sources */,
 				FEA9499E1D03048900840844 /* SMAFNClient.m in Sources */,
 				FEA949FB1D0337FC00840844 /* OPCarbonViewController.m in Sources */,
 				FEA949DD1D0323E200840844 /* AppDelegate.m in Sources */,
@@ -888,11 +888,12 @@
 				FEA949A01D03048900840844 /* SMRequestQueue.m in Sources */,
 				FE05D0AB1D0E3C580050EE12 /* WCTransitionAnimations.m in Sources */,
 				FEA949E11D0323F100840844 /* OPNavigationController.m in Sources */,
-				FEC5EB691D09B945002E69A5 /* NSArray+PureLayout.m in Sources */,
 				FEA949901D03048900840844 /* SMAPI.m in Sources */,
 				FEA949161D03045B00840844 /* main.m in Sources */,
 				FEC5EB571D09A32F002E69A5 /* OPTabBarView.m in Sources */,
 				FEA949881D03048900840844 /* FMDatabaseAdditions.m in Sources */,
+				FEC5EB3C1D09A278002E69A5 /* WCTransitioningDelegate.m in Sources */,
+				BD23445A1D0D00B70063D77C /* NSArray+PureLayout.m in Sources */,
 				FEA949DE1D0323E200840844 /* OPRootViewController.m in Sources */,
 				FEA949FE1D03384F00840844 /* OPMainViewController.m in Sources */,
 				FE0194AF1D0861910019B04C /* SMServerModel.m in Sources */,
@@ -900,6 +901,7 @@
 				FEA949981D03048900840844 /* AFNetworkReachabilityManager.m in Sources */,
 				FEC5EB6D1D09C049002E69A5 /* OPRoleViewController.m in Sources */,
 				FEC5EB6A1D09B945002E69A5 /* NSLayoutConstraint+PureLayout.m in Sources */,
+				FEC5EB281D099A2B002E69A5 /* OPDal.m in Sources */,
 				FEA9499C1D03048900840844 /* AFURLResponseSerialization.m in Sources */,
 				FEA949A11D03048900840844 /* SMUrlRequest+SM.m in Sources */,
 				FEA9498E1D03048900840844 /* UIDevice+SM.m in Sources */,
