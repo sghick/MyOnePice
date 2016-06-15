@@ -20,7 +20,9 @@
 
 - (instancetype)initWithSingleAnimatedTransitioning:(WCAnimatedTransitioning *)singleTrans;
 
-// 推荐设置
-- (void)setFromViewController:(UIViewController<WCAnimationViewControllerDelegate> *)fromVC toViewController:(UIViewController<WCAnimationViewControllerDelegate> *)toVC;
+// 推荐设置,设置之后方可使用手势功能
+- (void)setFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC;
+// 添加手势,设置fromVC和toVC之后方可使用手势功能
+- (void)setPanGestureWithInteractiveType:(WCInteractiveTransitionType)type direction:(WCInteractiveTransitionGestureDirection)direction gestureConifg:(GestureConifg)gestureConifg;
 
 @end

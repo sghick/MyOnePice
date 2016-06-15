@@ -15,5 +15,6 @@
 #import "WCAnimatedTransitioning.h"
 #import "WCTransitionAnimations.h"
 #import "UIView+WCTransition.h"
+#import "WCInteractiveTransition.h"
 
 #endif /* WCTransitions_h */

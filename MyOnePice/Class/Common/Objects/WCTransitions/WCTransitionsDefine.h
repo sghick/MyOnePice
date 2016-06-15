@@ -7,7 +7,7 @@
 //
 
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class WCAnimatedTransitioning;
 
@@ -63,13 +63,32 @@ typedef void (^WCAnimationDidStopDelegateBlock)(WCAnimatedTransitioning *transit
                                                 BOOL finished);
 
 typedef NS_ENUM(NSInteger, WCTransitioningDelegateType) {
-    WCTransitioningDelegateFTTrans, // 推出和收起各用一个动画
+    WCTransitioningDelegateFTTrans  = 0, // 推出和收起各用一个动画
     WCTransitioningDelegateSingle,  // 推出和收起只用一个动画
 };
 
 typedef NS_ENUM(NSInteger, WCTransitioningDelegateVCType) {
-    WCTransitioningDelegateVCFrom,
+    WCTransitioningDelegateVCFrom   = 0,
     WCTransitioningDelegateVCTo,
+};
+
+//手势响应
+typedef void(^GestureConifg)();
+
+//手势的方向
+typedef NS_ENUM(NSUInteger, WCInteractiveTransitionGestureDirection) {
+    WCInteractiveTransitionGestureDirectionLeft = 0,
+    WCInteractiveTransitionGestureDirectionRight,
+    WCInteractiveTransitionGestureDirectionUp,
+    WCInteractiveTransitionGestureDirectionDown
+};
+
+//手势控制哪种转场
+typedef NS_ENUM(NSUInteger, WCInteractiveTransitionType) {
+    WCInteractiveTransitionTypePresent = 0,
+    WCInteractiveTransitionTypeDismiss,
+    WCInteractiveTransitionTypePush,
+    WCInteractiveTransitionTypePop,
 };
 
 typedef NS_ENUM(NSInteger, WCViewAnimationOptions) {

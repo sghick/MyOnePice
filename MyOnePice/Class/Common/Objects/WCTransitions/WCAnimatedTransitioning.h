@@ -56,8 +56,13 @@
  */
 @property (assign, nonatomic) WCTransitioningDelegateVCType transVCType;
 
-@property (weak  , nonatomic, readonly) UIViewController<WCAnimationViewControllerDelegate> *fromVC;
-@property (weak  , nonatomic, readonly) UIViewController<WCAnimationViewControllerDelegate> *toVC;
+// 相对vc,当从present到dismiss时,会互相交换
+@property (weak  , nonatomic, readonly) UIViewController *fromVC;
+@property (weak  , nonatomic, readonly) UIViewController *toVC;
+
+// 设置时的vc,不变
+@property (weak  , nonatomic, readonly) UIViewController *iniFromVC;
+@property (weak  , nonatomic, readonly) UIViewController *iniToVC;
 
 #pragma mark - DelegateBlock
 /**
@@ -87,6 +92,6 @@
 /**
  *  设置fromVC和toVC
  */
-- (void)setFromViewController:(UIViewController<WCAnimationViewControllerDelegate> *)fromVC toViewController:(UIViewController<WCAnimationViewControllerDelegate> *)toVC;
+- (void)setFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC;
 
 @end

@@ -40,6 +40,17 @@
 
 + (WCTransitioningDelegate *)transitionForTransDelegate2 {
     WCAnimatedTransitioning *single = [[WCAnimatedTransitioning alloc] init];
+    [single setHandleDelegateNavBarControllerBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *navigationController, UINavigationControllerOperation operation, UIViewController *fromVC, UIViewController *toVC) {
+        transitioning.options = (operation == UINavigationControllerOperationPush
+                                 ? UIViewAnimationOptionTransitionFlipFromRight
+                                 : UIViewAnimationOptionTransitionFlipFromLeft);
+        transitioning.transVCType = (operation == UINavigationControllerOperationPush
+                                     ? WCTransitioningDelegateVCFrom
+                                     : WCTransitioningDelegateVCTo);
+        transitioning.transitionBlock = (operation == UINavigationControllerOperationPush
+                                         ? [WCTransitionAnimations animateBlockForBlowup1]
+                                         : [WCTransitionAnimations animateBlockForLetting1]);
+    }];
     [single setHandleDelegatePresentedBlock:^(WCAnimatedTransitioning *transitioning, UIViewController *presented, UIViewController *presenting, UIViewController *source) {
         transitioning.transitionBlock = [WCTransitionAnimations animateBlockForBlowup1];
     }];

@@ -7,9 +7,15 @@
 //
 
 #import "WCTransitioningDelegate.h"
+#import "WCInteractiveTransition.h"
 #import "WCAnimatedTransitioning.h"
 
 @interface WCTransitioningDelegate()
+
+@property (strong, nonatomic) WCInteractiveTransition *presentInterTrans;
+@property (strong, nonatomic) WCInteractiveTransition *dismissInterTrans;
+@property (strong, nonatomic) WCInteractiveTransition *pushInterTrans;
+@property (strong, nonatomic) WCInteractiveTransition *popInterTrans;
 
 @property (strong, nonatomic) WCAnimatedTransitioning *fromTrans;
 @property (strong, nonatomic) WCAnimatedTransitioning *toTrans;
@@ -134,7 +140,28 @@
     return trans;
 }
 
-- (void)setFromViewController:(UIViewController<WCAnimationViewControllerDelegate> *)fromVC toViewController:(UIViewController<WCAnimationViewControllerDelegate> *)toVC {
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController{
+    if ([animationController isKindOfClass:[WCAnimatedTransitioning class]]) {
+        WCAnimatedTransitioning *trans = (WCAnimatedTransitioning *)animationController;
+        if (trans.transVCType == WCTransitioningDelegateVCTo) {
+            return self.popInterTrans.interation ? self.popInterTrans : nil;
+        } else {
+            return self.pushInterTrans.interation ? self.pushInterTrans : nil;
+        }
+    } else {
+        return nil;
+    }
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForPresentation:(id<UIViewControllerAnimatedTransitioning>)animator{
+    return self.presentInterTrans.interation ? self.presentInterTrans : nil;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator{
+    return self.dismissInterTrans.interation ? self.dismissInterTrans : nil;
+}
+
+- (void)setFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
     if (self.fromTrans) {
         [self.fromTrans setFromViewController:fromVC toViewController:toVC];
     }
@@ -143,6 +170,71 @@
     }
     if (self.single) {
         [self.single setFromViewController:fromVC toViewController:toVC];
+    }
+}
+
+- (void)setPanGestureWithInteractiveType:(WCInteractiveTransitionType)type
+                               direction:(WCInteractiveTransitionGestureDirection)direction
+                           gestureConifg:(GestureConifg)gestureConifg {
+    switch (type) {
+        case WCInteractiveTransitionTypePresent: {
+            WCAnimatedTransitioning *trans = nil;
+            if (self.single) {
+                trans = self.single;
+            } else if (self.fromTrans) {
+                trans = self.fromTrans;
+            }
+            if (trans) {
+                self.presentInterTrans = [WCInteractiveTransition interactiveTransitionWithTransitionType:type GestureDirection:direction];
+                self.presentInterTrans.presentConifg = gestureConifg;
+                [self.presentInterTrans addPanGestureForViewController:trans.iniFromVC];
+            }
+        }
+            break;
+        case WCInteractiveTransitionTypeDismiss: {
+            WCAnimatedTransitioning *trans = nil;
+            if (self.single) {
+                trans = self.single;
+            } else if (self.toTrans) {
+                trans = self.toTrans;
+            }
+            if (trans) {
+                self.dismissInterTrans = [WCInteractiveTransition interactiveTransitionWithTransitionType:type GestureDirection:direction];
+                self.dismissInterTrans.dismissConifg = gestureConifg;
+                [self.dismissInterTrans addPanGestureForViewController:trans.iniToVC];
+            }
+        }
+            break;
+        case WCInteractiveTransitionTypePush: {
+            WCAnimatedTransitioning *trans = nil;
+            if (self.single) {
+                trans = self.single;
+            } else if (self.fromTrans) {
+                trans = self.fromTrans;
+            }
+            if (trans) {
+                self.pushInterTrans = [WCInteractiveTransition interactiveTransitionWithTransitionType:type GestureDirection:direction];
+                self.pushInterTrans.pushConifg = gestureConifg;
+                [self.pushInterTrans addPanGestureForViewController:trans.iniFromVC];
+            }
+        }
+            break;
+        case WCInteractiveTransitionTypePop: {
+            WCAnimatedTransitioning *trans = nil;
+            if (self.single) {
+                trans = self.single;
+            } else if (self.toTrans) {
+                trans = self.toTrans;
+            }
+            if (trans) {
+                self.popInterTrans = [WCInteractiveTransition interactiveTransitionWithTransitionType:type GestureDirection:direction];
+                self.popInterTrans.popConifg = gestureConifg;
+                [self.popInterTrans addPanGestureForViewController:trans.iniToVC];
+            }
+        }
+            break;
+        default:
+            break;
     }
 }
 

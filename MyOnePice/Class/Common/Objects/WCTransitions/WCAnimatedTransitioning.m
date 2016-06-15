@@ -10,9 +10,6 @@
 
 @interface WCAnimatedTransitioning ()
 
-@property (weak  , nonatomic) UIViewController<WCAnimationViewControllerDelegate> *iniFromVC;
-@property (weak  , nonatomic) UIViewController<WCAnimationViewControllerDelegate> *iniToVC;
-
 @end
 
 @implementation WCAnimatedTransitioning
@@ -56,7 +53,7 @@
     }
 }
 
-- (void)setFromViewController:(UIViewController<WCAnimationViewControllerDelegate> *)fromVC toViewController:(UIViewController<WCAnimationViewControllerDelegate> *)toVC {
+- (void)setFromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
     _fromVC = fromVC;
     _toVC = toVC;
     _iniFromVC = fromVC;
@@ -64,6 +61,7 @@
 }
 
 - (void)setTransVCType:(WCTransitioningDelegateVCType)transVCType {
+    _transVCType = transVCType;
     switch (transVCType) {
         case WCTransitioningDelegateVCFrom: {
             _fromVC = _iniFromVC;
